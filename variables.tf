@@ -26,12 +26,6 @@ variable "esxi_user" {
 }
 
 
-# esxi host 1
-variable "esxi_host1" {
-  type = string
-  default = "yourhost"
-}
-
 # esxi password
 variable "esxi_password" {
   type = string
@@ -45,7 +39,7 @@ variable "esxi_host1" {
   default = "yourhost"
 }
 
-# esxi network interface
+# esxi host 1 network interface
 variable "network_interfaces_esxi_host1" {
   default = [
     "vmnic2",
@@ -65,18 +59,39 @@ variable "esxi_host2" {
 }
 
 # ssl cert esxi host 2
-variable "thumbprint_esxi_host2"
+variable "thumbprint_esxi_host2" {
   type = string
   default = "fignerprint"
 
+}
 
-
-# esxi network interface 
+# esxi host 2 network interface 
 variable "network_interfaces_esxi_host2" {
   default = [
     "vmnic2",
     "vmnic3",
   ]
+}
+
+# esxi host 3
+variable "esxi_host3" {
+  type = string
+  default = "yourhost"
+}
+
+# esxi host 3 network interface
+variable "network_interfaces_esxi_host3" {
+  default = [
+    "vmnic2",
+    "vmnic3",
+  ]
+}
+
+# ssl cert esxi host 3
+variable "thumbprint_esxi_host3" {
+  type = string 
+  default = "fignerprint"
+
 }
 
 # cluster name
